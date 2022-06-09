@@ -1,4 +1,4 @@
-import Movie from "./Movie";
+import Movie from "../interfaces/Movie";
 import removeMovieWithoutRatings from "./removeMovieWithoutRating";
 
 interface Average {

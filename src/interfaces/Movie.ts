@@ -1,4 +1,4 @@
-import IndicativeRating from "./IndicativeRating";
+import IndicativeRating from "../enums/IndicativeRating";
 
 interface Movie {
   id: number;
