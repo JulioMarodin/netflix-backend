@@ -1,32 +1,28 @@
-import filterMoviesByIndicativeRating from "./filterMoviesWithIndicativeRating";
-import IndicativeRating from "./IndicativeRating";
-import Movie from "./Movie" 
-import orderByAverageRate from "./orderByAverageRate";
-import removeMovieWithoutRatings from "./removeMovieWithoutRating";
-import User from "./user";
+import axios from "axios";
 
+import IndicativeRating from "./enums/IndicativeRating";
+import Movie from "./interfaces/Movie" 
+import orderByAverageRate from "./utils/orderByAverageRate";
+import removeMovieWithoutRatings from "./utils/removeMovieWithoutRating";
+import User from "./interfaces/User";
+import filterMoviesByIndicativeRating from "./utils/filterMoviesWithIndicativeRating";
 
-function getRandomInt(min: number, max: number) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
 const movies: Movie[] = [
   {
-    id: getRandomInt(0, 1000),
+    id: 1,
     name: 'Spider Man',
     ratings: [1, 5, 3],
     indicativeRating: IndicativeRating.AL
   },
   {
-    id: getRandomInt(0, 1000),
+    id: 2,
     name: 'Doctor Strange',
     ratings: [5, 5, 3],
     indicativeRating: IndicativeRating.A18
   },
   {
-    id: getRandomInt(0, 1000),
+    id: 3,
     name: 'Avengers',
     ratings: [],
     indicativeRating: IndicativeRating.A12
