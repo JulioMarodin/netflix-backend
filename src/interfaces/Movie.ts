@@ -1,11 +1,13 @@
 interface Movie {
   id: number;
 
-  name: string;
+  title: string;
 
-  directed_by: string;
+  ratings: number[];
 
   duration: number;
+
+  directedBy: string;
 }
 
 export default Movie;
