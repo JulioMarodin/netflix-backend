@@ -1,17 +1,12 @@
 import Movie from "../interfaces/Movie";
+import { MoviesFromApiDTO } from "../services/MovieService";
 
-interface MoviesFromApiDTO {
-  id: number;
-  title: string;
-  directed_by: string;
-  duration: number;
-}
-
-function loadMovies(moviesFromApi: MoviesFromApiDTO[]): Partial<Movie>[] {
-  return moviesFromApi.map((movie) => ({
+function loadMovies(moviesFromApi: MoviesFromApiDTO[]): Movie[] {
+  return moviesFromApi.map((movie: MoviesFromApiDTO) => ({
     id: movie.id,
-    name: movie.title,
-    directed_by: movie.directed_by,
+    title: movie.title,
+    directedBy: movie.directedBy,
+    ratings: [],
     duration: movie.duration
   }))
 }
